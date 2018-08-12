@@ -1,0 +1,41 @@
+{{ partial "default_head.html" . }}
+
+<body>
+
+<div class="container">  
+    <div class="row">
+        <div class="twelve columns">
+            {{ partial "header.html" . }}
+        </div>                
+    </div>  
+</div>   
+
+<div class="container">
+    <div class="row">
+        <div class="twelve columns">
+            <nav class="nav">    
+                {{ partial "nav.html" . }}
+            </nav>
+        </div>    
+    </div>
+</div>
+
+<div class="container">     
+    <div class="row">   
+         <div class="ten columns"> 
+            <div class="content-col">
+               <article class="content">{{ .Content }}</article>
+            </div>  
+        </div>
+    </div>    
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="twelve columns" id="footer-col">
+            <footer id="footer">
+                {{ partial "default_footer.html" }}
+            </footer>
+        </div>
+    </div>
+</div>

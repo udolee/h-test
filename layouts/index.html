@@ -1,0 +1,45 @@
+{{ partial "default_head.html" . }}
+
+<body>
+
+<div class="container">  
+    <div class="row">
+        <div class="twelve columns">
+            {{ partial "header.html" . }}
+        </div>                
+    </div>  
+</div>   
+
+<div class="container">  
+    <div class="row">
+        <div class="twelve columns">
+            <nav class="nav">
+                {{ partial "nav.html" . }}
+            </nav>
+        </div>
+    </div>
+</div>
+
+<div class="container">     
+    <div class="row">   
+        <div class="twelve columns">    
+            <div class="content-col">
+             <article class="content">                     
+                {{ with .Site.GetPage "dates.md" }} 
+                    {{ .Content }} 
+                {{end}}
+            </article> 
+            </div>
+            </div>  
+    </div> <!-- row end -->   
+</div> <!-- Container end -->
+
+<div class="container">
+    <div class="row">
+        <div class="twelve columns" id="footer-col">
+            <footer id="footer">
+                {{ partial "default_footer.html" . }}
+            </footer>
+        </div>
+    </div>
+</div>
